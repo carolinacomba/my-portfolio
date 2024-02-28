@@ -1,7 +1,6 @@
 <div class="flex flex-col min-h-screen items-center justify-center">
     <div class="flex flex-col min-h-[100dvh]">
         <header class="px-4 lg:px-6 h-14 flex items-center justify-center">
-
             <nav class="flex px-3 gap-3 my-auto content-center items-center lg:gap-10" id="nav">
                 <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -12,26 +11,26 @@
                         <path d="M17 9.3a2.8 2.8 0 0 0-3.5 1 3.1 3.1 0 0 0 0 3.4 2.7 2.7 0 0 0 3.5 1"></path>
                     </svg>
                 </a>
-                <a class="font-medium hover:underline underline-offset-4" href="#sobre-mi">
+                <a class="font-medium hover:underline underline-offset-4" (click)="scrollToSection('sobre-mi')">
                     Sobre mí
                 </a>
-                <a class="font-medium hover:underline underline-offset-4" href="#educacion">
+                <a class="font-medium hover:underline underline-offset-4" (click)="scrollToSection('educacion')">
                     Educación
                 </a>
-                <a class="font-medium hover:underline underline-offset-4" href="#proyectos">
+                <a class="font-medium hover:underline underline-offset-4" (click)="scrollToSection('proyectos')">
                     Proyectos
                 </a>
-                <a class="font-medium hover:underline underline-offset-4" href="#skills">
+                <a class="font-medium hover:underline underline-offset-4" (click)="scrollToSection('skills')">
                     Skills
                 </a>
             </nav>
         </header>
         <main class="flex-1">
             <app-inicio></app-inicio>
-            <app-sobre-mi></app-sobre-mi>
-            <app-educacion></app-educacion>
-            <app-proyectos></app-proyectos>
-            <app-skills></app-skills>
+            <app-sobre-mi id="sobre-mi"></app-sobre-mi>
+            <app-educacion id="educacion"></app-educacion>
+            <app-proyectos id="proyectos"></app-proyectos>
+            <app-skills id="skills"></app-skills>
         </main>
     </div>
     <footer class="py-4 text-center text-sm">
