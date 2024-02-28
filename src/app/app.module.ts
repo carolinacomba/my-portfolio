@@ -7,12 +7,14 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     SobreMiComponent,
+    EducacionComponent,
     SkillsComponent,
     ProyectosComponent
   ],
