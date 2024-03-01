@@ -15,7 +15,7 @@ html {
   
   .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #fbf4ec 50%, #f6e9da 50%);
+    background-image: linear-gradient(-60deg, #c7bdb1 50%, #ddd9d6 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
