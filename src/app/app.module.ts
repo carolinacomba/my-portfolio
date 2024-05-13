@@ -1,3 +1,4 @@
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,7 +17,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
     SobreMiComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,
