@@ -8,7 +8,7 @@ import { EmailService } from 'src/app/services/email.service';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
-contactForm: FormGroup
+  contactForm: FormGroup
 
   constructor(private fb: FormBuilder, private emailService: EmailService) {
     this.contactForm = this.fb.group({
