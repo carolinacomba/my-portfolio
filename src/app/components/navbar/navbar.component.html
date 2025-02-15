@@ -1,0 +1,30 @@
+<div class="flex flex-col">
+    <nav class="p-4 bg-transparent lg:bg-transparent">
+        <div class="flex flex-wrap items-center content-between justify-center">
+            <a class="mr-4 font-medium text-black transition-transform duration-300 ease-in-out transform hover:underline underline-offset-4 hover:scale-110 sm:mb-0 md:mx-6 md:text-2xl"
+                (click)="scrollToSection('sobre-mi')" style="cursor: pointer;">
+                Sobre mí
+            </a>
+            <a class="mr-4 font-medium text-black transition-transform duration-300 ease-in-out transform hover:underline underline-offset-4 hover:scale-110 sm:mb-0 md:mx-6 md:text-2xl"
+                (click)="scrollToSection('experiencia')" style="cursor: pointer;">
+                Experiencia
+            </a>
+            <a class="mr-4 font-medium text-black transition-transform duration-300 ease-in-out transform hover:underline underline-offset-4 hover:scale-110 sm:mb-0 md:mx-6 md:text-2xl"
+                (click)="scrollToSection('educacion')" style="cursor: pointer;">
+                Educación
+            </a>
+            <a class="font-medium text-black transition-transform duration-300 ease-in-out transform hover:underline underline-offset-4 hover:scale-110 sm:mb-0 md:mx-6 md:text-2xl"
+                (click)="scrollToSection('skills')" style="cursor: pointer;">
+                Skills
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-1">
+        <app-inicio></app-inicio>
+        <app-sobre-mi id="sobre-mi"></app-sobre-mi>
+        <app-experiencia id="experiencia"></app-experiencia>
+        <app-educacion id="educacion"></app-educacion>
+        <app-skills id="skills"></app-skills>
+    </main>
+</div>
