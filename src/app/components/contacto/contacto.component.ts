@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import iziToast from 'izitoast';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
@@ -22,12 +23,20 @@ export class ContactoComponent {
     if (this.contactForm.valid) {
       this.emailService.sendContact(this.contactForm.value).subscribe({
         next: () => {
-          alert("¡Gracias por tu mensaje!");
+          iziToast.success({
+            title: '¡Genial!',
+            message: 'Gracias por tu mensaje',
+            position: 'topRight'
+          });
           this.contactForm.reset();
         },
         error: (error) => {
           console.error("Error al enviar el mensaje", error);
-          alert("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.");
+          iziToast.error({
+            title: 'Error',
+            message: 'Hubo un problema al enviar tu mensaje',
+            position: 'topRight'
+          });
         }
       });
     }
