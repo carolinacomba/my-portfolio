@@ -9,7 +9,8 @@ import { EmailService } from 'src/app/services/email.service';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
-  contactForm: FormGroup
+  contactForm: FormGroup;
+  isSubmitting = false;
 
   constructor(private fb: FormBuilder, private emailService: EmailService) {
     this.contactForm = this.fb.group({
@@ -20,23 +21,31 @@ export class ContactoComponent {
   }
 
   onSubmit() {
-    if (this.contactForm.valid) {
+    if (this.contactForm.valid && !this.isSubmitting) {
+      this.isSubmitting = true;
+      
       this.emailService.sendContact(this.contactForm.value).subscribe({
         next: () => {
           iziToast.success({
-            title: '¡Genial!',
-            message: 'Gracias por tu mensaje',
-            position: 'topRight'
+            title: '¡Mensaje enviado!',
+            message: 'Gracias por contactarme. Te responderé pronto.',
+            position: 'topRight',
+            backgroundColor: '#10B981',
+            theme: 'dark'
           });
           this.contactForm.reset();
+          this.isSubmitting = false;
         },
         error: (error) => {
           console.error("Error al enviar el mensaje", error);
           iziToast.error({
-            title: 'Error',
-            message: 'Hubo un problema al enviar tu mensaje',
-            position: 'topRight'
+            title: 'Error al enviar',
+            message: 'Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.',
+            position: 'topRight',
+            backgroundColor: '#EF4444',
+            theme: 'dark'
           });
+          this.isSubmitting = false;
         }
       });
     }

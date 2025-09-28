@@ -1,44 +1,127 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
-    class="max-w-md p-6 mx-auto mt-8 mb-8 bg-white rounded-lg shadow-md hover:scale-105">
-    <h2 class="mb-6 text-2xl font-bold text-center text-gray-800">Contactame</h2>
-
-    <div class="mb-4">
-        <label for="name" class="block mb-2 text-sm font-bold text-gray-700">Nombre</label>
-        <input type="text" id="name" formControlName="name"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Nombre completo">
-        <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)"
-            class="mt-1 text-xs text-red-500">
-            Por favor, ingrese su nombre.
+<div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <!-- Contact Information -->
+        <div class="reveal space-y-8">
+            <div>
+                <h3 class="text-3xl font-bold text-white mb-6">
+                    <i class="bi bi-envelope mr-3 text-gradient"></i>
+                    Contacto
+                </h3>
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    ¿Tienes un proyecto en mente? Me encantaría conocer más sobre tu idea 
+                    y cómo puedo ayudarte a hacerla realidad con soluciones técnicas robustas.
+                </p>
+            </div>
+            
+            <!-- Contact Cards -->
+            <div class="space-y-6">
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                            <i class="bi bi-envelope text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white">Email</h4>
+                            <p class="text-gray-400">carolinacomba42@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
+                            <i class="bi bi-linkedin text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white">LinkedIn</h4>
+                            <p class="text-gray-400">linkedin.com/in/carolinacomba</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                            <i class="bi bi-github text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white">GitHub</h4>
+                            <p class="text-gray-400">github.com/carolinacomba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="reveal">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+                <h3 class="text-2xl font-bold text-white mb-6 text-center">
+                    Envíame un mensaje
+                </h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-white mb-2">
+                            <i class="bi bi-person mr-2"></i>Nombre completo
+                        </label>
+                        <input type="text" 
+                               id="name" 
+                               formControlName="name"
+                               class="form-input"
+                               placeholder="Tu nombre completo">
+                        <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)"
+                             class="mt-2 text-sm text-red-400 flex items-center">
+                            <i class="bi bi-exclamation-circle mr-1"></i>
+                            Por favor, ingrese su nombre.
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-white mb-2">
+                            <i class="bi bi-envelope mr-2"></i>Correo electrónico
+                        </label>
+                        <input type="email" 
+                               id="email" 
+                               formControlName="email"
+                               class="form-input"
+                               placeholder="tu@email.com">
+                        <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)"
+                             class="mt-2 text-sm text-red-400 flex items-center">
+                            <i class="bi bi-exclamation-circle mr-1"></i>
+                            Por favor, ingrese un email válido.
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-white mb-2">
+                            <i class="bi bi-chat-dots mr-2"></i>Mensaje
+                        </label>
+                        <textarea id="message" 
+                                  formControlName="message" 
+                                  rows="5"
+                                  class="form-input resize-none"
+                                  placeholder="Cuéntame sobre tu proyecto o idea..."></textarea>
+                        <div *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)"
+                             class="mt-2 text-sm text-red-400 flex items-center">
+                            <i class="bi bi-exclamation-circle mr-1"></i>
+                            El mensaje es requerido.
+                        </div>
+                    </div>
+                    
+                    <button type="submit" 
+                            [disabled]="contactForm.invalid"
+                            class="w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 
+                                   text-white font-semibold rounded-xl hover-lift glow
+                                   disabled:opacity-50 disabled:cursor-not-allowed
+                                   transition-all duration-300 flex items-center justify-center">
+                        <i class="bi bi-send mr-2"></i>
+                                <span *ngIf="!isSubmitting">Enviar mensaje</span>
+                                <span *ngIf="isSubmitting">Enviando...</span>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
-
-    <div class="mb-4">
-        <label for="email" class="block mb-2 text-sm font-bold text-gray-700">Email</label>
-        <input type="email" id="email" formControlName="email"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="ejemplo@email.com">
-        <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)"
-            class="mt-1 text-xs text-red-500">
-            Por favor, ingrese un email válido.
-        </div>
-    </div>
-
-    <div class="mb-6">
-        <label for="message" class="block mb-2 text-sm font-bold text-gray-700">Mensaje</label>
-        <textarea id="message" formControlName="message" rows="4"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Escriba un mensaje"></textarea>
-        <div *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)"
-            class="mt-1 text-xs text-red-500">
-            El mensaje es requerido.
-        </div>
-    </div>
-
-    <div class="flex justify-center">
-        <button type="submit" [disabled]="contactForm.invalid"
-            class="px-4 py-2 font-semibold text-black bg-gray-300 border border-gray-300 rounded hover:bg-gray-800 hover:text-white hover:border-transparent disabled:opacity-50 disabled:cursor-not-allowed">
-            Enviar mensaje
-        </button>
-    </div>
-</form>
+</div>

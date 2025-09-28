@@ -1,6 +1,223 @@
-<div class="flex flex-col items-center justify-center">
+<!-- Minimalist Background -->
+<div class="animated-bg"></div>
+<div class="code-pattern"></div>
+
+<!-- Main Container -->
+<div class="relative z-10 min-h-screen">
+    <!-- Navigation -->
     <app-navbar></app-navbar>
-</div>
-<div class="px-4 pb-2 mb-8 md:px-0">
-    <app-contacto></app-contacto>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6 lg:space-y-8 reveal text-center lg:text-left">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
+                            <span class="gradient-text-animated">Carolina</span>
+                            <br>
+                            <span class="text-white">Comba</span>
+                        </h1>
+                        <div class="space-y-2">
+                            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light">
+                                <span class="typing">Desarrolladora Full Stack</span>
+                            </p>
+                            <p class="text-base sm:text-lg text-gray-400 max-w-lg mx-auto lg:mx-0">
+                                Desarrolladora especializada en crear soluciones robustas y escalables 
+                                que resuelven problemas reales con tecnología de vanguardia.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex justify-center lg:justify-start space-x-4 sm:space-x-6">
+                        <a href="https://github.com/carolinacomba" target="_blank" 
+                           class="group p-3 sm:p-4 glass rounded-2xl hover-lift glow">
+                            <i class="bi bi-github text-2xl sm:text-3xl group-hover:text-blue-400 transition-colors"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/carolinacomba/" target="_blank"
+                           class="group p-3 sm:p-4 glass rounded-2xl hover-lift glow">
+                            <i class="bi bi-linkedin text-2xl sm:text-3xl group-hover:text-blue-400 transition-colors"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <!-- Right Content - Profile Card -->
+                <div class="relative reveal flex justify-center lg:justify-end">
+                    <div class="glass rounded-3xl p-6 sm:p-8 text-center max-w-sm w-full">
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full overflow-hidden glow">
+                            <img src="assets/imagenes/Carolina Comba.png" 
+                                 alt="Carolina Comba" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+                        <span class="text-gradient">Sobre </span> 
+                        <span class="text-white">Mí</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="reveal">
+                        <div class="glass rounded-3xl p-6 sm:p-8 space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                                    <i class="bi bi-person text-xl sm:text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-white">Carolina Comba</h3>
+                                    <p class="text-gray-400 text-sm sm:text-base">22 años • Córdoba, Argentina</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+                                Estudiante avanzada de la 
+                                <span class="text-gradient font-semibold">Tecnicatura Universitaria en Programación</span> 
+                                en la UTN de Córdoba. Mi enfoque se centra en el desarrollo de software de calidad, 
+                                con énfasis en buenas prácticas, arquitectura limpia y soluciones eficientes.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-center p-3 sm:p-4 glass rounded-2xl">
+                                    <div class="text-2xl sm:text-3xl font-bold text-gradient">3+</div>
+                                    <div class="text-gray-400 text-sm">Años estudiando</div>
+                                </div>
+                                <div class="text-center p-3 sm:p-4 glass rounded-2xl">
+                                    <div class="text-2xl sm:text-3xl font-bold text-gradient">10+</div>
+                                    <div class="text-gray-400 text-sm">Tecnologías</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal">
+                        <div class="space-y-4 sm:space-y-6">
+                            <div class="glass rounded-2xl p-4 sm:p-6 hover-lift">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
+                                        <i class="bi bi-lightbulb text-white text-lg sm:text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg sm:text-xl font-semibold text-white">Aprendizaje Continuo</h4>
+                                        <p class="text-gray-400 text-sm sm:text-base">Siempre explorando nuevas tecnologías y metodologías</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="glass rounded-2xl p-4 sm:p-6 hover-lift">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                                        <i class="bi bi-people text-white text-lg sm:text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg sm:text-xl font-semibold text-white">Trabajo en Equipo</h4>
+                                        <p class="text-gray-400 text-sm sm:text-base">Me encanta colaborar y enfrentar desafíos juntos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="glass rounded-2xl p-4 sm:p-6 hover-lift">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center">
+                                        <i class="bi bi-rocket text-white text-lg sm:text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg sm:text-xl font-semibold text-white">Innovación</h4>
+                                        <p class="text-gray-400 text-sm sm:text-base">Creando soluciones creativas y eficientes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+                    <span class="text-gradient">Skills </span> 
+                    <span class="text-white">& Tecnologías</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Tecnologías y herramientas que domino para crear experiencias digitales increíbles
+                </p>
+            </div>
+            
+            <app-skills></app-skills>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+                    <span class="text-gradient">Experiencia </span> 
+                    <span class="text-white">Laboral</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Experiencia profesional en desarrollo de software
+                </p>
+            </div>
+            
+            <app-experiencia></app-experiencia>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+                    <span class="text-gradient">Educación </span> 
+                    <span class="text-white">& Formación</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Formación académica y desarrollo profesional
+                </p>
+            </div>
+            
+            <app-educacion></app-educacion>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+                    <span class="text-gradient">Contacto</span>
+                </h2>
+            </div>
+            
+            <app-contacto></app-contacto>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <app-footer></app-footer>
 </div>
