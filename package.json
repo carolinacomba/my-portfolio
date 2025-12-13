@@ -1,6 +1,10 @@
 {
   "name": "portfolio-f",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=20.x",
+    "npm": ">=10.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
