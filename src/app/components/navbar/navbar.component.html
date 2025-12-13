@@ -2,7 +2,12 @@
      [class.glass]="isScrolled" 
      [class.backdrop-blur-md]="isScrolled">
     <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-center relative">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#home" (click)="scrollToSection('home')" class="flex items-center hover-lift cursor-pointer">
+                <img src="assets/imagenes/new-icon.png" alt="Carolina Comba" class="w-12 h-12 sm:w-10 sm:h-10 rounded-xl object-cover">
+            </a>
+            
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="#home" 
@@ -50,7 +55,7 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="lg:hidden p-2 glass rounded-xl hover-lift absolute right-0" 
+            <button class="lg:hidden p-2 glass rounded-xl hover-lift" 
                     (click)="toggleMobileMenu()"
                     [class.text-white]="!isMobileMenuOpen"
                     [class.text-blue-400]="isMobileMenuOpen">
