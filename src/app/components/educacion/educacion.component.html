@@ -1,54 +1,164 @@
-<section class="w-full py-12 border-t border-black md:py-24 lg:py-32">
-    <div class="max-w-4xl mx-auto px-7 md:px-8 lg:px-10">
-        <div class="text-center">
-            <h2
-                class="flex items-center justify-center pb-5 text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-                <i class="mx-3 text-6xl bi bi-mortarboard"></i>
-                Educación
-            </h2>
+<div class="mx-auto max-w-4xl">
+    <div class="space-y-8">
+        <!-- UTN Education -->
+        <div class="reveal">
+            <div class="timeline-item">
+                <div class="p-8 rounded-3xl glass hover-lift">
+                    <div class="flex flex-col mb-6 md:flex-row md:items-center md:justify-between">
+                        <div class="flex items-center mb-4 space-x-4 md:mb-0">
+                            <div class="relative">
+                                <div class="flex justify-center items-center w-14 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full sm:w-16 sm:h-10">
+                                    <i class="text-sm text-white bi bi-mortarboard sm:text-base"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">{{ 'EDUCATION.UTN.TITLE' | translate }}</h3>
+                                <p class="text-gray-400">{{ 'EDUCATION.UTN.INSTITUTION' | translate }}</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm font-medium text-blue-400 rounded-full bg-blue-500/20">
+                                {{ 'EDUCATION.COMPLETED' | translate }}
+                            </span>
+                            <span class="px-3 py-1 text-sm rounded-full glass">
+                                {{ 'EDUCATION.UTN.DATE' | translate }}
+                            </span>
+                        </div>
         </div>
-        <div class="space-y-10">
-            <div
-                class="overflow-hidden transition-transform transform bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105">
-                <div class="p-6">
-                    <h3 class="mb-2 text-2xl font-semibold text-gray-800 dark:text-white">
-                        Tecnicatura Universitaria en Programación
-                    </h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Universidad Tecnológica Nacional | 2022 - Actualidad
-                    </p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside dark:text-gray-300">
-                        <li>En marzo de 2022 comencé la Tecnicatura Universitaria en Programación en la UTN - FRC y
-                            actualmente me faltan dos materias para recibir el título, entre ellas el trabajo final.
-                        </li>
-                        <li>En el desarrollo backend aprendí lenguajes como: Java, .NET y C#, adquiriendo conocimientos
-                            en la creación de APIs RESTful utilizando frameworks como Spring Boot y ASP.NET Core.</li>
-                        <li>En el desarrollo frontend adquirí conocimientos en HTML, CSS, JavaScript y Angular, además
-                            de bibliotecas como Bootstrap y Tailwind para crear diseños modernos de manera eficiente.
-                        </li>
-                        <li>Base de datos: SQL Server, PostgreSQL, MySQL.</li>
-                        <li>Metodologías ágiles: Scrum.</li>
-                    </ul>
+                    
+                    <div class="space-y-4">
+                        <p class="leading-relaxed text-gray-300">
+                            {{ 'EDUCATION.UTN.DESCRIPTION' | translate }}
+                        </p>
+                        
+                        <div class="grid gap-6 md:grid-cols-2">
+                            <div>
+                                <h4 class="mb-3 text-lg font-semibold text-white">{{ 'EDUCATION.UTN.BACKEND_TITLE' | translate }}</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="text-green-400 bi bi-check-circle"></i>
+                                        <span class="text-sm text-gray-300">{{ 'EDUCATION.UTN.BACKEND_1' | translate }}</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="text-green-400 bi bi-check-circle"></i>
+                                        <span class="text-sm text-gray-300">{{ 'EDUCATION.UTN.BACKEND_3' | translate }}</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="text-green-400 bi bi-check-circle"></i>
+                                        <span class="text-sm text-gray-300">{{ 'EDUCATION.UTN.BACKEND_2' | translate }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="mb-3 text-lg font-semibold text-white">{{ 'EDUCATION.UTN.FRONTEND_TITLE' | translate }}</h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="text-green-400 bi bi-check-circle"></i>
+                                        <span class="text-sm text-gray-300">{{ 'EDUCATION.UTN.FRONTEND_2' | translate }}</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="text-green-400 bi bi-check-circle"></i>
+                                        <span class="text-sm text-gray-300">{{ 'EDUCATION.UTN.FRONTEND_1' | translate }}</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="text-green-400 bi bi-check-circle"></i>
+                                        <span class="text-sm text-gray-300">{{ 'EDUCATION.UTN.FRONTEND_3' | translate }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="mb-3 text-lg font-semibold text-white">{{ 'EDUCATION.UTN.DATABASE_TITLE' | translate }} & {{ 'EDUCATION.UTN.METHODOLOGY_TITLE' | translate }}</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 text-sm rounded-lg glass">{{ 'EDUCATION.UTN.DATABASE_1' | translate }}</span>
+                                <span class="px-3 py-1 text-sm rounded-lg glass">{{ 'EDUCATION.UTN.DATABASE_2' | translate }}</span>
+                                <span class="px-3 py-1 text-sm rounded-lg glass">{{ 'EDUCATION.UTN.DATABASE_3' | translate }}</span>
+                                <span class="px-3 py-1 text-sm rounded-lg glass">{{ 'EDUCATION.UTN.METHODOLOGY_1' | translate }}</span>
+                                <span class="px-3 py-1 text-sm rounded-lg glass">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Integral Capacitando Course -->
+        <div class="reveal">
+            <div class="timeline-item">
+                <div class="p-8 rounded-3xl glass hover-lift">
+                    <div class="flex flex-col mb-6 md:flex-row md:items-center md:justify-between">
+                        <div class="flex items-center mb-4 space-x-4 md:mb-0">
+                            <div class="relative">
+                                <div class="flex justify-center items-center w-14 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full sm:w-16 sm:h-10">
+                                    <i class="text-sm text-white bi bi-book sm:text-base"></i>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">{{ 'EDUCATION.INTEGRAL.TITLE' | translate }}</h3>
+                                <p class="text-gray-400">{{ 'EDUCATION.INTEGRAL.INSTITUTION' | translate }}</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm font-medium text-purple-400 rounded-full bg-purple-500/20">
+                                {{ 'EDUCATION.COMPLETED' | translate }}
+                            </span>
+                            <span class="px-3 py-1 text-sm rounded-full glass">
+                                {{ 'EDUCATION.INTEGRAL.DATE' | translate }}
+                            </span>
                 </div>
             </div>
 
-            <div
-                class="overflow-hidden transition-transform transform bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105">
-                <div class="p-6">
-                    <h3 class="mb-2 text-2xl font-semibold text-gray-800 dark:text-white">
-                        Curso de Fundamentos de Programación e Introducción a Base de Datos
-                    </h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Integral Capacitando | Marzo 2021 - Agosto 2021
-                    </p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside dark:text-gray-300">
-                        <li>Temas cubiertos: introducción a la programación, variables y tipos de datos, estructuras de
-                            control de flujo, funciones, programación orientada a objetos en lenguaje Java, introducción
-                            a bases de datos en SQL con Access.</li>
-                        <li>Examen final aprobado con 10.</li>
-                    </ul>
+                    <div class="space-y-4">
+                        <p class="leading-relaxed text-gray-300">
+                            {{ 'EDUCATION.INTEGRAL.DESCRIPTION' | translate }}
+                        </p>
+                        
+                        <div>
+                            <h4 class="mb-3 text-lg font-semibold text-white">{{ 'EDUCATION.INTEGRAL.TOPICS' | translate }}</h4>
+                            <div class="grid gap-3 md:grid-cols-2">
+                                <div class="flex items-center space-x-3">
+                                    <i class="text-green-400 bi bi-check-circle"></i>
+                                    <span class="text-sm text-gray-300">{{ 'EDUCATION.INTEGRAL.TOPIC_1' | translate }}</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="text-green-400 bi bi-check-circle"></i>
+                                    <span class="text-sm text-gray-300">{{ 'EDUCATION.INTEGRAL.TOPIC_2' | translate }}</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="text-green-400 bi bi-check-circle"></i>
+                                    <span class="text-sm text-gray-300">{{ 'EDUCATION.INTEGRAL.TOPIC_3' | translate }}</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="text-green-400 bi bi-check-circle"></i>
+                                    <span class="text-sm text-gray-300">{{ 'EDUCATION.INTEGRAL.TOPIC_4' | translate }}</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="text-green-400 bi bi-check-circle"></i>
+                                    <span class="text-sm text-gray-300">{{ 'EDUCATION.INTEGRAL.TOPIC_5' | translate }}</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="text-green-400 bi bi-check-circle"></i>
+                                    <span class="text-sm text-gray-300">{{ 'EDUCATION.INTEGRAL.TOPIC_6' | translate }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gradient-to-r rounded-2xl from-green-500/10 to-blue-500/10">
+                            <div class="flex items-center space-x-3">
+                                <i class="text-2xl text-yellow-400 bi bi-trophy"></i>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white">Examen Final</h4>
+                                    <p class="text-gray-300">Aprobado con calificación 10/10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

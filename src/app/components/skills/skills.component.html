@@ -1,158 +1,154 @@
-<section class="w-full py-12 border-t border-b border-black md:py-24 lg:py-25">
-    <div class="grid items-center justify-center gap-4 text-center px-7 md:px-6 md:gap-10">
-        <div class="space-y-2">
-            <h2
-                class="flex items-center justify-center pb-5 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                <img src="assets/imagenes/skill.png" alt="Experiencia Laboral" class="mr-3 w-14 h-14">
-                Skills
-            </h2>
-            <p
-                class="justify-center text-base text-center text-gray-600 dark:text-gray-400 sm:text-lg md:text-xl lg:text-2xl">
-                Estas son algunas de las tecnologías en las que tengo habilidades.
-            </p>
-        </div>
-        <div class="grid gap-4 md:gap-8 lg:gap-12">
-            <h3 class="justify-center text-2xl font-bold tracking-tighter text-center md:text-3xl">
-                Backend
-            </h3>
-        </div>
-        <div
-            class="grid items-stretch justify-center w-full grid-cols-3 gap-2 lg:grid-cols-4 md:grid-cols-4 md:gap-6 lg:gap-8 sm:gap-4">
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/Java.png" width="64" height="64" alt="java"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    Java
-                </span>
+<div class="max-w-7xl mx-auto">
+    <!-- Skills Grid -->
+    <div class="grid gap-8 lg:gap-12">
+        <!-- Backend Skills -->
+        <div class="reveal">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                    <i class="bi bi-server mr-3 text-gradient"></i>
+                    {{ 'SKILLS.BACKEND' | translate }}
+                </h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-2">{{ 'SKILLS.BACKEND_DESC' | translate }}</p>
             </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/C_.png" width="64" height="64" alt="c#"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    C#
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/.NET.png" width="64" height="64" alt=".net"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    .NET
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/Spring.png" width="64" height="64" alt="spring"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    Spring
-                </span>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/Java.png" alt="Java" class="w-12 h-12 sm:w-16 sm:h-16">
+                    </div>
+                    <h4 class="skill-name text-sm sm:text-base">Java</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/C_.png" alt="C#" class="w-12 h-12 sm:w-16 sm:h-16">
+                    </div>
+                    <h4 class="skill-name text-sm sm:text-base">C#</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/Spring.png" alt="Spring" class="w-12 h-12 sm:w-16 sm:h-16">
+                    </div>
+                    <h4 class="skill-name text-sm sm:text-base">Spring</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 opacity-20"></div>
+                            <span class="text-white font-bold text-xs sm:text-sm relative z-10">.NET</span>
+                        </div>
+                    </div>
+                    <h4 class="skill-name text-sm sm:text-base">.NET</h4>
+                </div>
             </div>
         </div>
-        <div class="grid gap-4 md:gap-8 lg:gap-12">
-            <h3 class="justify-center text-2xl font-bold tracking-tighter text-center md:text-3xl">
-                Frontend
-            </h3>
-        </div>
-        <div
-            class="grid items-stretch justify-center w-full grid-cols-3 gap-4 lg:grid-cols-4 md:grid-cols-4 md:gap-6 lg:gap-8">
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/HTML.png" width="64" height="64" alt="html5"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    HTML5
-                </span>
+        
+        <!-- Frontend Skills -->
+        <div class="reveal">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                    <i class="bi bi-palette mr-3 text-gradient"></i>
+                    {{ 'SKILLS.FRONTEND' | translate }}
+                </h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-2">{{ 'SKILLS.FRONTEND_DESC' | translate }}</p>
             </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/CSS.png" width="64" height="64" alt="css3"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    CSS3
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/js.png" width="64" height="64" alt="JavaScript"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    JavaScript
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/Angular.png" width="64" height="64" alt="angular"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    Angular
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/TS.png" width="64" height="64" alt="TypeScript"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    TypeScript
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/Bootstrap.png" width="64" height="64" alt="Bootstrap"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    Bootstrap
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/Tailwind.svg" width="64" height="64" alt="Tailwind"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    Tailwind
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/jQuery.webp" width="64" height="64" alt="jquery"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    jQuery
-                </span>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/HTML.png" alt="HTML5" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">HTML5</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/CSS.png" alt="CSS3" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">CSS3</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/js.png" alt="JavaScript" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">JavaScript</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/Angular.png" alt="Angular" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">Angular</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/TS.png" alt="TypeScript" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">TypeScript</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/Bootstrap.png" alt="Bootstrap" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">Bootstrap</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/Tailwind.svg" alt="Tailwind" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">Tailwind</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/jQuery.webp" alt="jQuery" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">jQuery</h4>
+                </div>
             </div>
         </div>
-        <div class="grid gap-4 md:gap-8 lg:gap-12">
-            <h3 class="justify-center text-2xl font-bold tracking-tighter text-center md:text-3xl">
-                Base de datos
-            </h3>
-        </div>
-        <div class="grid items-stretch justify-center w-full grid-cols-3 gap-4 md:grid-cols-3 md:gap-6 lg:gap-8">
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/SQL Server.png" width="64" height="64" alt="sql server"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    SQL Server
-                </span>
+        
+        <!-- Database Skills -->
+        <div class="reveal">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                    <i class="bi bi-database mr-3 text-gradient"></i>
+                    {{ 'SKILLS.DATABASE' | translate }}
+                </h3>
+                <div class="w-16 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-2">{{ 'SKILLS.DATABASE_DESC' | translate }}</p>
             </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/PostgreSQL.png" width="64" height="64" alt="PostgreSQL"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    PostgreSQL
-                </span>
-            </div>
-            <div class="flex flex-col items-center justify-center p-4 rounded-lg md:p-6">
-                <img src="assets/imagenes/MySQL.png" width="64" height="64" alt="mysql"
-                    class="mb-2 transition-transform duration-300 ease-in-out transform hover:scale-110"
-                    style="aspect-ratio:64/64;object-fit:cover">
-                <span class="text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-100">
-                    MySQL
-                </span>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/SQL Server.png" alt="SQL Server" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">SQL Server</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/PostgreSQL.png" alt="PostgreSQL" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">PostgreSQL</h4>
+                </div>
+                
+                <div class="skill-card group">
+                    <div class="skill-icon">
+                        <img src="assets/imagenes/MySQL.png" alt="MySQL" class="w-16 h-16">
+                    </div>
+                    <h4 class="skill-name">MySQL</h4>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
