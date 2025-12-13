@@ -9,6 +9,21 @@ import { EmailService } from './services/email.service';
 })
 export class AppComponent implements OnInit {
   
+  // Calcular edad automáticamente
+  get edad(): number {
+    const fechaNacimiento = new Date(2003, 4, 28); // Mayo es el mes 4 (0-indexed)
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+    
+    // Si aún no ha pasado el cumpleaños este año, restar 1
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+      edad--;
+    }
+    
+    return edad;
+  }
+  
   ngOnInit() {
     this.initScrollReveal();
     this.initTypingAnimation();
