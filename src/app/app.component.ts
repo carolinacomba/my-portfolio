@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from './services/email.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,14 @@ import { EmailService } from './services/email.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
+  currentLang: string = 'es';
+  
+  constructor(private translate: TranslateService) {
+    // Configurar idioma inicial
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
+  }
   
   // Calcular edad automáticamente
   get edad(): number {
@@ -22,6 +31,12 @@ export class AppComponent implements OnInit {
     }
     
     return edad;
+  }
+  
+  // Cambiar idioma
+  switchLanguage() {
+    this.currentLang = this.currentLang === 'es' ? 'en' : 'es';
+    this.translate.use(this.currentLang);
   }
   
   ngOnInit() {
